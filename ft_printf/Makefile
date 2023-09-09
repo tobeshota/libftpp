@@ -6,7 +6,7 @@
 #    By: toshota <toshota@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/26 19:52:48 by toshota           #+#    #+#              #
-#    Updated: 2023/06/11 18:59:18 by toshota          ###   ########.fr        #
+#    Updated: 2023/09/09 18:09:52 by toshota          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ all:		$(NAME)
 bonus:		all
 
 .c.o:		$(OBJS)
-			$(CC) $(CFLAGS) -I $(INCS) -c $< -o $(<:.c=.o)
+			$(CC) $(CFLAGS) -I $(INCS) -c $< -o $@
 
 clean:
 			$(RM) $(OBJS) $(B_SRCS:.c=.o)
