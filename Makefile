@@ -6,7 +6,7 @@
 #    By: toshota <toshota@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/26 19:52:48 by toshota           #+#    #+#              #
-#    Updated: 2023/09/04 17:14:00 by toshota          ###   ########.fr        #
+#    Updated: 2023/09/14 17:23:30 by toshota          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,10 +56,5 @@ fclean:		clean
 			$(RM) $(NAME)
 
 re:			fclean all
-
-test:		$(NAME)
-			@$(CC) $(CFLAGS) -I $(INCS) test.c $(NAME) -o test
-			@./test
-			@$(RM) test
 
 .PHONY:		all bonus clean fclean re test
