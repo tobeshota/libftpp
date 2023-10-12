@@ -6,7 +6,7 @@
 #    By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/26 19:52:48 by toshota           #+#    #+#              #
-#    Updated: 2023/09/24 15:00:01 by toshota          ###   ########.fr        #
+#    Updated: 2023/10/12 23:45:57 by toshota          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,6 @@ CC		=	cc
 CFLAGS	=	-Wall -Wextra -Werror
 AR		=	ar rcs
 RM		=	rm -f
-INCS	=	ft_printf.h
 SRCS	=	ft_printf.c ft_abs_address.c ft_abs_value.c ft_putlnb_fd.c \
 			ft_putnbr_base.c get_args_output_len.c get_hexnum_lowercase_flag.c \
 			get_hexnum_uppercase_flag.c get_int_flag.c get_nbrlen_base.c \
@@ -39,7 +38,7 @@ all:		$(NAME)
 bonus:		all
 
 .c.o:		$(OBJS)
-	@ $(CC) $(CFLAGS) -I $(INCS) -c $< -o $(<:.c=.o)
+	@ $(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
 clean:
 	@ $(RM) $(OBJS) $(B_SRCS:.c=.o)

@@ -6,7 +6,7 @@
 #    By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/26 19:52:48 by toshota           #+#    #+#              #
-#    Updated: 2023/09/24 14:58:11 by toshota          ###   ########.fr        #
+#    Updated: 2023/10/12 23:44:29 by toshota          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,6 @@ CFLAGS	=	-Wall -Wextra -Werror
 AR		=	ar rc
 RM		=	rm -f
 PRINTF	=   ft_printf/
-INCS	=	libft.h
 M_SRCS	=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c \
 			ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_strlcpy.c ft_strlcat.c \
 			ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_memchr.c \
@@ -45,7 +44,7 @@ bonus:
 	@ make WITH_BONUS=1
 
 .c.o:		$(OBJS)
-	@ $(CC) $(CFLAGS) -I $(INCS) -c $< -o $@
+	@ $(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	@ make clean -C $(PRINTF)
